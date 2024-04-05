@@ -5,3 +5,13 @@ Write your code for the 'Rna Transcription' exercise in this file. Make the test
 To get started with TDD, see the `README.md` file in your
 `ruby/rna-transcription` directory.
 =end
+class Complement
+  def self.of_dna(letters)
+    answer_hash = { "G" => "C",
+                    "C" => "G",
+                    "T" => "A",
+                    "A" => "U"}
+    letters.chars.map {|letter| answer_hash[letter]}.join
+  end
+end
+    
